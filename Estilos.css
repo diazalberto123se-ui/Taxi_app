@@ -1,0 +1,58 @@
+/* estilos.css */
+body { 
+    background: #0b090a; 
+    color: white; 
+    font-family: sans-serif; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100vh; 
+    text-align: center; 
+}
+
+.header { 
+    background: #161a1d; 
+    padding: 50px 20px; 
+    border-radius: 0 0 40px 40px; 
+    border-bottom: 2px solid #ffb703; 
+}
+
+h1 { 
+    color: #ffb703; 
+    margin: 0; 
+    font-size: 32px; 
+}
+
+.container { 
+    padding: 40px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+    justify-content: center; 
+    flex-grow: 1; 
+}
+
+/* Botón Principal: Iniciar Sesión */
+button { 
+    background: #ffb703; 
+    color: black; 
+    border: none; 
+    padding: 20px; 
+    border-radius: 15px; 
+    font-weight: bold; 
+    font-size: 18px; 
+    cursor: pointer; 
+}
+
+/* Botón Secundario: Registrarse */
+.btn-sec { 
+    background: transparent; 
+    color: #ffb703; 
+    border: 2px solid #ffb703; 
+}
+
+#frase { 
+    font-style: italic; 
+    color: #adb5bd; 
+    margin-top: 10px; 
+}

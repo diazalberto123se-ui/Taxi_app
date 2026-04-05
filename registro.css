@@ -1,0 +1,73 @@
+/* estilos_registro.css */
+body { 
+    background: #0b090a; 
+    color: white; 
+    font-family: sans-serif; 
+    padding: 20px; 
+    margin: 0;
+}
+
+.card { 
+    background: #161a1d; 
+    padding: 20px; 
+    border-radius: 20px; 
+    border: 1px solid #333; 
+    max-width: 400px; /* Para que no se estire demasiado en tablets */
+    margin: auto;
+}
+
+label { 
+    color: #ffb703; 
+    font-weight: bold; 
+    display: block; 
+    margin-top: 15px; 
+    font-size: 13px; 
+}
+
+input, select { 
+    width: 100%; 
+    padding: 15px; 
+    margin-top: 5px; 
+    border-radius: 12px; 
+    border: 1px solid #333; 
+    background: #0b090a; 
+    color: white; 
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+input:focus { 
+    border-color: #ffb703; 
+    outline: none; 
+}
+
+button { 
+    width: 100%; 
+    padding: 18px; 
+    background: #ffb703; 
+    color: black; 
+    border: none; 
+    border-radius: 15px; 
+    font-weight: bold; 
+    margin-top: 25px; 
+    cursor: pointer; 
+    font-size: 16px;
+}
+
+.foto-perfil { 
+    width: 90px; 
+    height: 90px; 
+    border-radius: 50%; 
+    background: #333; 
+    margin: 10px auto; 
+    display: block; 
+    object-fit: cover; 
+    border: 2px solid #ffb703; 
+    cursor: pointer;
+}
+
+.instruccion-foto {
+    text-align: center; 
+    font-size: 10px; 
+    color: #888;
+}
