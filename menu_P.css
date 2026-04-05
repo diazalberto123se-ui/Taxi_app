@@ -1,0 +1,272 @@
+/* General */
+body, html {
+    margin: 0; padding: 0;
+    background: #0b090a;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Fondo */
+.mapa-fondo {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle, #1a1a1a 0%, #0b090a 100%);
+    z-index: 1;
+}
+
+/* Header */
+.header-app {
+    position: absolute;
+    top: 0; width: 100%;
+    background: #161a1d;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ffb703;
+    border-radius: 0 0 30px 30px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.icon-menu { color: #ffb703; font-size: 20px; cursor: pointer; }
+.app-title { font-weight: bold; letter-spacing: 1px; }
+.user-photo { width: 40px; height: 40px; border-radius: 50%; border: 2px solid #ffb703; }
+
+/* Buscador */
+.search-box {
+    position: absolute;
+    top: 100px; left: 5%; width: 90%;
+    background: #161a1d;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
+
+.icon-search { color: #ffb703; }
+.search-box input {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Panel Inferior */
+.sheet-servicios {
+    position: absolute;
+    bottom: 0; width: 100%;
+    background: #161a1d;
+    border-radius: 40px 40px 0 0;
+    padding: 30px 20px;
+    border-top: 2px solid #ffb703;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.card-v {
+    background: #0b090a;
+    padding: 15px 5px;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid #333;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card-v.active { border-color: #ffb703; background: #1e1e1e; }
+.card-v i { font-size: 24px; display: block; margin-bottom: 5px; }
+.card-v span { font-size: 12px; font-weight: bold; color: #ffb703; }
+.card-v p { font-size: 9px; margin: 3px 0; color: #888; }
+
+.btn-solicitar {
+    width: 100%;
+    background: #ffb703;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 183, 3, 0.3);
+}
+
+/* Modales / Capas */
+.capa-pregunta {
+    position: fixed;
+    bottom: -100%;
+    left: 0; width: 100%;
+    background: #161a1d;
+    z-index: 20;
+    border-radius: 40px 40px 0 0;
+    padding: 40px 25px;
+    box-sizing: border-box;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-top: 3px solid #ffb703;
+}
+
+.capa-pregunta.active { bottom: 0; }
+
+.titulo-capa { margin-top: 0; color: #ffb703; text-align: center; }
+.subtitulo-capa { color: #888; text-align: center; margin-bottom: 20px; }
+
+/* Inputs de Personas */
+.container-inputs {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.input-group { text-align: center; }
+.input-group label { display: block; margin-bottom: 10px; color: #ffb703; }
+
+.input-contador {
+    background: #0b090a;
+    border: 2px solid #ffb703;
+    color: white;
+    width: 80px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Grid de Pagos */
+.grid-pagos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-pago {
+    background: #0b090a;
+    color: white;
+    border: 2px solid #333;
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-pago:active { border-color: #ffb703; }
+
+.display-total {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffb703;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 15;
+    display: none;
+}
+
+.overlay.active { display: block; }
+
+/* --- DISEÑO DEL SIDEBAR (MENÚ LATERAL) --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; /* Escondido a la izquierda */
+    width: 280px;
+    height: 100%;
+    background: #161a1d;
+    z-index: 100; /* Por encima de todo */
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    border-right: 2px solid #ffb703;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cuando el sidebar tiene la clase active, se desliza hacia adentro */
+.sidebar.active {
+    left: 0;
+}
+
+/* Cabecera del Menú (Foto y Nombre) */
+.sidebar-header {
+    padding: 40px 20px;
+    background: #0b090a;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ffb703;
+    margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+
+/* Opciones del Menú */
+.sidebar-content {
+    padding: 20px 0;
+    flex-grow: 1;
+}
+
+.menu-item {
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.menu-item i {
+    margin-right: 15px;
+    color: #ffb703;
+    width: 20px;
+    text-align: center;
+}
+
+.menu-item:active, .menu-item:hover {
+    background: #0b090a;
+    color: #ffb703;
+}
+
+/* Botón de Cerrar Sesión al final */
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+.btn-logout {
+    color: #e63946; /* Rojo para salida */
+    font-weight: bold;
+}
