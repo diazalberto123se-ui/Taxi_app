@@ -1,0 +1,15 @@
+{
+  "name": "MotoTaxi Premium",
+  "short_name": "MotoTaxi",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b090a",
+  "theme_color": "#ffb703",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
